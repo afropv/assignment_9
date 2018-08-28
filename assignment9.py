@@ -35,19 +35,16 @@ print('a/b result in 0')
 
 print('1.) IMPORT ERROR\n')
 
-''' import sys
-sys.modules['os']= None
-import os   '''
+''' from math import fact '''
 
 
 print('Handling Exception\n')
 
 try:
-    import sys
-    sys.modules['os']=None
-    import os
+    from math import fact
 except ImportError:
-    print(sys.modules['os'])
+    from math import factorial
+    print(factorial(7))
     
 print('\n2.) VALUE ERROR\n')
 
